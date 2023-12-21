@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins',sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background: rgb(62, 61, 61);
+}
+
+.container{
+    width: 400px;
+    padding: 25px 35px;
+    background: #ffff;
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    position: absolute;
+    transform: translate(-50%,-50%) ;
+
+}
+
+.container p{
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.container input{
+    width: 100%;
+    height: 50px;
+    border: 1px solid black;
+    outline: 0;
+    padding: 10px;
+    margin: 10px 0 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.container button{
+    width: 100%;
+    height: 50px;
+    border: 0;
+    background: black;
+    outline: 0;
+    padding: 10px;
+    margin: 10px 0 20px;
+    border-radius: 5px; 
+    color: #ffff;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+    cursor: pointer;
+    margin: 20px 0;
+    font-weight: 500;
+}
+.container button:hover {
+    background: #333; /* Change the background color on hover */
+    
+}
+
+#imgBox{
+    
+    border-radius: 5px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s;
+    width: 100%;
+    max-width: 200px; /* Set a maximum width for larger screens */
+    margin: 10px auto;
+}
+
+#imgBox img{
+    width: 100%;
+    padding: 10px;
+    height: auto; /* Maintain aspect ratio */
+   
+}
+
+
+#imgBox.show-img{
+    max-height: 300px;
+    margin: 10px auto;
+    border: 1px solid #d1d1d1;
+}
+
+.error{
+    animation: shake 0.1s linear 10;
+}
+
+@keyframes shake{
+    0%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(-2px);
+    }
+    50%{
+        transform: translateX(0);
+    }
+    75%{
+        transform: translateX(2px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 600px) {
+    .container {
+        width: 90%; 
+    }
+
+    .container button {
+        font-size: 14px; 
+    }
+}
